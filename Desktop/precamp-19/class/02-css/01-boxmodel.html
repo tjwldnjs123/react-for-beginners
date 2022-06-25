@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      div {
+        width: 80px;
+        height: 80px;
+        border: 2px solid red;
+      }
+      /* #bb {
+        box-sizing: border-box;
+        기본값은 content-box
+      }
+      #cb {
+        box-sizing: content-box;
+      } */
+      .pb {
+        width: 500px;
+        height: 320px;
+        border: 2px solid blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>박스 1</div>
+    <div class="pb">
+      <div>박스 2</div>
+      <div>박스 3</div>
+      <div>박스 4</div>
+    </div>
+    <div>박스 5</div>
+  </body>
+</html>

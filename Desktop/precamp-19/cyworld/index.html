@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>서지원님의 미니홈피 :: 사이좋은 사람들, 싸이월드</title>
+    <link href="./styles/index.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gamja+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8b25b21688.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function menuHome() {
+        document
+          .getElementById("contentFrame")
+          .setAttribute("src", "home.html");
+        document.getElementById("menuHome").style =
+          "color:black; background-color:white;";
+        document.getElementById("menuGame").style =
+          "color:white; background-color:#298eb5";
+        document.getElementById("menuJukebox").style =
+          "color:white; background-color:#298eb5";
+      }
+      const menuGame = () => {
+        document
+          .getElementById("contentFrame")
+          .setAttribute("src", "game.html");
+        document.getElementById("menuGame").style =
+          "color:black; background-color:white;";
+        document.getElementById("menuHome").style =
+          "color:white; background-color:#298eb5";
+        document.getElementById("menuJukebox").style =
+          "color:white; background-color:#298eb5";
+      };
+
+      const menuJukebox = () => {
+        document
+          .getElementById("contentFrame")
+          .setAttribute("src", "jukebox.html");
+        document.getElementById("menuJukebox").style =
+          "color:black; background-color:white;";
+        document.getElementById("menuGame").style =
+          "color:white; background-color:#298eb5";
+        document.getElementById("menuHome").style =
+          "color:white; background-color:#298eb5";
+      };
+    </script>
+  </head>
+  <body>
+    <div class="background">
+      <div class="outerbox">
+        <div class="wrapper">
+          <div class="wrapper__left">
+            <div class="wrapper__left__header">
+              <div class="today">TODAY 0 | TOTAL 12345</div>
+            </div>
+            <div class="wrapper__left__body">
+              <div class="left__body__header">
+                <div class="left__body__header__gray">
+                  <img src="./images/고양이.jpg" alt="고양이" />
+                </div>
+                <div class="left__body__header__line"></div>
+              </div>
+              <div class="left__body__profile">
+                <div class="profile">
+                  <i class="fa-solid fa-cat"></i>
+                  <p>이름</p>
+                </div>
+                <div class="profile">
+                  <i class="fa-solid fa-phone"></i>
+                  <p>Phone</p>
+                </div>
+                <div class="profile">
+                  <i class="fa-solid fa-envelope"></i>
+                  <p>E-mail</p>
+                </div>
+                <div class="profile">
+                  <i class="fa-solid fa-star"></i>
+                  <p>인스타그램</p>
+                </div>
+              </div>
+              <div class="left__body__footer">
+                <!-- 단축키 window = . -->
+                <p>오늘의 기분</p>
+                <select name="mood">
+                  <option value="기쁨">기쁨😊</option>
+                  <option value="슬픔">슬픔🥲</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper__right">
+            <div class="wrapper__right__header">
+              <div class="right__header__title">사이좋은 사람들, 싸이월드</div>
+              <div class="right__header__setting">사생활보호설정</div>
+            </div>
+            <div class="wrapper__right__body">
+              <iframe id="contentFrame" src="./home.html"></iframe>
+            </div>
+          </div>
+          <div class="navigation">
+            <div class="navigation__item" id="menuHome" onclick="menuHome()">
+              홈
+            </div>
+            <div class="navigation__item" id="menuGame" onclick="menuGame()">
+              게임
+            </div>
+            <div
+              class="navigation__item"
+              id="menuJukebox"
+              onclick="menuJukebox()"
+            >
+              쥬크박스
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
